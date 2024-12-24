@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuarav Network Solutions</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>
+                <img src="logo.png" alt="Shuarav Network Solutions Logo" class="logo">
+                <span id="typing-effect-main"></span>
+            </h1>
+            <nav>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="more-projects.html">Projects</a>
+                <a href="contact-form.html">Contact Us</a>
+                <a href="quote.html" class="cta-button">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>
+            <span id="typing-effect-title"></span>
+        </h1>
+        <p>
+            <span id="typing-effect-subtitle"></span>
+        </p>
+        <a href="contact-form.html" class="hero-button">Get a Free Consultation</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <i class="icon icon-cable"></i>
+                <h3>Network Cabling</h3>
+                <p>Reliable and efficient cabling solutions for seamless connectivity.</p>
+            </div>
+            <div class="service">
+                <i class="icon icon-hardware"></i>
+                <h3>Hardware Installation</h3>
+                <p>High-quality network equipment installation tailored to your needs.</p>
+            </div>
+            <div class="service">
+                <i class="icon icon-maintenance"></i>
+                <h3>Network Maintenance</h3>
+                <p>Ongoing support to keep your network running smoothly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <h2>Why Choose Shuarav Network Solutions?</h2>
+        <ul>
+            <li><strong>Experienced Team:</strong> Over 10 years in network installation and management.</li>
+            <li><strong>Client-Focused:</strong> Committed to timely, reliable service for your business.</li>
+            <li><strong>Quality Assurance:</strong> Top hardware and installation practices.</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Our Work in Action</h2>
+        <div class="project-item">
+            <img src="project1.jpg" alt="Project 1">
+            <p>Office Network Setup for XYZ Corporation</p>
+        </div>
+        <a href="more-projects.html" class="cta-button">See More Projects</a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>“Shuarav Network Solutions transformed our office with fast, reliable network installation.” —
+            Client Name, Company</blockquote>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contact" class="cta-section">
+        <h2>Ready to improve your connectivity?</h2>
+        <p>Contact us for a free consultation</p>
+        <a href="contact-form.html" class="cta-button">Get in Touch</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="more-projects.html">Projects</a>
+                <a href="contact-form.html">Contact Us</a>
+            </div>
+            <p>© 2024 Shuarav Network Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mainText = "SHAURAV NETWORK SOLUTIONS";
+        const titleText = "Reliable Network Solutions for Your Business";
+        const subtitleText = "Your partner in building seamless and secure connectivity";
+        const typingElementMain = document.getElementById("typing-effect-main");
+        const typingElementTitle = document.getElementById("typing-effect-title");
+        const typingElementSubtitle = document.getElementById("typing-effect-subtitle");
+        let mainIndex = 0;
+        let titleIndex = 0;
+        let subtitleIndex = 0;
+        function typeMain() {
+            if (mainIndex < mainText.length) {
+                typingElementMain.textContent += mainText.charAt(mainIndex);
+                mainIndex++;
+                setTimeout(typeMain, 50); // Adjust speed if needed
+            }
+            else {
+                setTimeout(typeTitle, 0); // Delay before starting title
+            }
+        }
+        function typeTitle() {
+            if (titleIndex < titleText.length) {
+                typingElementTitle.textContent += titleText.charAt(titleIndex);
+                titleIndex++;
+                setTimeout(typeTitle, 40); // Adjust speed if needed
+            }
+            else {
+                setTimeout(typeSubtitle, 0); // Delay before starting subtitle
+            }
+        }
+        function typeSubtitle() {
+            if (subtitleIndex < subtitleText.length) {
+                typingElementSubtitle.textContent += subtitleText.charAt(subtitleIndex);
+                subtitleIndex++;
+                setTimeout(typeSubtitle, 60); // Adjust speed if needed
+            }
+        }
+
+        window.onload = typeMain; // Start typing main text on page load
+    </script>
+</body>
+
+</html>
